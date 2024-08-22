@@ -5,7 +5,7 @@ import { index } from "../../controllers/index.controller";
 
 /**
  * @swagger
- * /api/v1/users/:
+ * /:
  *   get:
  *     summary: Used to render inital page
  *     description: It is used to render the first page of the application
