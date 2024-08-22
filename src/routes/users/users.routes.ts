@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 
-import { index } from "../../controllers/index.controller";
+import { indexPage } from "../../controllers/index.controller";
 
 /**
  * @swagger
@@ -14,7 +14,7 @@ import { index } from "../../controllers/index.controller";
  *         description: Render front inital page of the application
  */
 
-router.get('/', index);
+router.get('/', indexPage);
 
 
 export default router;
