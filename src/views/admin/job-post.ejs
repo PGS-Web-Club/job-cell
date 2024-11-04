@@ -1,0 +1,96 @@
+<%- include("../partials/_heading.ejs") %>
+<header>
+  <div class="header-content">
+    <img
+      src="https://presidential.edu.np/file-manager/photos/1/logo.svg"
+      alt="Company Logo"
+      class="logo"
+    />
+    <h1>Post A Job</h1>
+  </div>
+</header>
+
+<main>
+  <form class="job-form" id="job-form">
+    <div class="form-section">
+      <h2>Company Details</h2>
+      <div class="form-group">
+        <input type="text" id="company-name" name="company-name" required />
+        <label for="company-name">Company Name</label>
+      </div>
+      <div class="form-group">
+        <select id="job-category" name="job-category" required>
+          <option value="" disabled selected>Select a category</option>
+          <option value="fulltime">Full Time</option>
+          <option value="parttime">Part Time</option>
+          <option value="intern">Intern</option>
+          <option value="remote">Remote</option>
+        </select>
+        <label for="job-category">Job Category</label>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Job Details</h2>
+      <div class="form-group">
+        <input type="text" id="job-title" name="job-title" required />
+        <label for="job-title">Job Title</label>
+      </div>
+      <div class="form-group">
+        <textarea
+          id="job-description"
+          name="job-description"
+          class="capital-first-letter"
+          required
+        ></textarea>
+        <label for="job-description">Job Description</label>
+      </div>
+      <div class="form-group">
+        <div class="editor-container">
+          <div id="job-qualification-editor"></div>
+        </div>
+        <label for="job-qualification-editor">Job Qualification</label>
+      </div>
+      <div class="form-group">
+        <div class="editor-container">
+          <div id="job-requirements-editor"></div>
+        </div>
+        <label for="job-requirements-editor">Job Requirements</label>
+      </div>
+    </div>
+
+    <h2>Upload your File:</h2>
+    <div class="file-dnd">
+      <input type="file" id="upload-image" accept="image/*" />
+      <div class="before-upload">
+        <div>
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <h4>Drag and Drop Image file or Browse</h4>
+          <p>Supports: JPEG, PNG, GIF, TIFF</p>
+        </div>
+      </div>
+      <div class="after-upload">
+        <div class="clear-btn">&times;</div>
+        <img src="" />
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Post Job</button>
+  </form>
+</main>
+
+<script src="/scripts/imageUpload.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+
+<script>
+  const quillreq = new Quill("#job-qualification-editor", {
+    theme: "snow",
+  });
+
+  const quillqual = new Quill("#job-requirements-editor", {
+    theme: "snow",
+  });
+</script>
+<script src="/scripts/jobPosts.js"></script>
+
+<%- include("../partials/_footer.ejs") %>

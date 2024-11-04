@@ -1,0 +1,104 @@
+<%- include("partials/_heading.ejs") %>
+
+<header>
+  <img
+    src="https://presidential.edu.np/file-manager/photos/1/logo.svg"
+    alt="Company Logo"
+    class="logo"
+  />
+</header>
+<div class="main-container">
+  <div class="job-info-container">
+    <div class="job-info-image-container">
+      <div class="job-info">
+        <h2 id="job-title"></h2>
+        <h3 id="company-name"></h3>
+        <p id="job-category"></p>
+      </div>
+      <div class="job-image-container">
+        <img src="" alt="Job Image" class="job-image" />
+      </div>
+    </div>
+    <div class="job-description-container">
+      <p id="job-description-full"></p>
+    </div>
+  </div>
+  <div class="apply-form-container">
+    <h2>Add your credentials to apply for the job</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+        required
+      /><br /><br />
+      <label for="phone">Phone Number:</label>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        placeholder="Enter your phone number"
+        required
+      /><br /><br />
+      <label for="email">Email Address:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email address"
+        required
+      /><br /><br />
+      <label for="cv">Submit CV:</label>
+      <div class="file-dnd cv-upload">
+        <input
+          type="file"
+          id="cv"
+          name="cv"
+          accept=".pdf, .docx, .doc"
+          required
+        />
+        <div class="before-upload">
+          <div>
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <h4>Drag and Drop CV file or Browse</h4>
+            <p>Supports: PDF, DOCX, DOC</p>
+          </div>
+        </div>
+        <div class="after-upload">
+          <div class="clear-btn">&times;</div>
+          <p id="cv-file-name"></p>
+        </div>
+      </div>
+      <br /><br />
+      <button id="apply-btn" class="submit-btn">Apply Now</button>
+    </form>
+  </div>
+</div>
+
+<footer></footer>
+<script src="apply.js"></script>
+<script src="submitCV.js"></script>
+
+<div
+  id="apply-modal"
+  class="modal"
+  style="
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  "
+>
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Application Successful!</h2>
+    <p>You have successfully applied for the job.</p>
+    <i class="fa-solid fa-check-circle"></i>
+  </div>
+</div>
+
+<%- include("partials/_footer.ejs) %>
