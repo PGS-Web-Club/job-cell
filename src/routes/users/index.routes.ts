@@ -8,10 +8,10 @@ import { indexPage, aboutUsPage, contactPage, loginPage } from "../../controller
  * /:
  *   get:
  *     summary: Used to render inital page
- *     description: It is used to render the first page of the application
+ *     description: It is used to render the initial page of the application
  *     responses:
  *       200:
- *         description: Render front inital page of the application
+ *         description: Render inital page of the application
  */
 
 router.get('/', indexPage);

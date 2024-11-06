@@ -617,11 +617,6 @@ body {
   margin-right: auto;
 }
 
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 .my-12 {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -647,24 +642,12 @@ body {
   width: 12rem;
 }
 
-.max-w-screen-2xl {
-  max-width: 1536px;
-}
-
-.max-w-7xl {
-  max-width: 80rem;
-}
-
-.max-w-screen-lg {
-  max-width: 1024px;
-}
-
-.max-w-5xl {
-  max-width: 64rem;
-}
-
 .max-w-3xl {
   max-width: 48rem;
+}
+
+.max-w-screen-2xl {
+  max-width: 1536px;
 }
 
 .transform {
@@ -810,14 +793,14 @@ body {
   line-height: 2rem;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .font-black {
