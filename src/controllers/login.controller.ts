@@ -6,5 +6,10 @@ export const loginPage = (req: Request, res: Response) => {
 
 
 export const postLogin = (req: Request, res: Response) => {
-    return res.status(200).json({ status: "success", message: "Login successful" }).redirect('/');
+    return res.status(200).redirect('/');
+};
+
+
+export const forgotPassword = (req: Request, res: Response) => {
+    return res.render('forgot-password', { title: "Reset Password" });
 };
