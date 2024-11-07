@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 
-import { indexPage, aboutUsPage, contactPage, loginPage } from "../../controllers/index.controller";
+import { indexPage, aboutUsPage, contactPage } from "../../controllers/index.controller";
 
 /**
  * @swagger
@@ -17,7 +17,6 @@ import { indexPage, aboutUsPage, contactPage, loginPage } from "../../controller
 router.get('/', indexPage);
 router.get('/about-us', aboutUsPage);
 router.get('/contact', contactPage);
-router.get('/login', loginPage);
 
 
 export default router;
