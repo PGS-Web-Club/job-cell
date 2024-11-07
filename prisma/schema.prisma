@@ -15,6 +15,7 @@ model User {
   phoneNumber String
   rollNo      String   @unique
   image       String
+  password    String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   Profile     Profile?
@@ -45,10 +46,38 @@ enum Permissions {
 }
 
 model Profile {
-  id          Int         @id @default(autoincrement())
-  profileType ProfileType
-  user        User        @relation(fields: [userId], references: [id])
-  userId      Int         @unique
+  id            Int             @id @default(autoincrement())
+  profileType   ProfileType
+  cv            String
+  Experiences   Experiences[]
+  Projects      Projects[]
+  Qualification Qualification[]
+  user          User            @relation(fields: [userId], references: [id])
+  userId        Int             @unique
+}
+
+model Experiences {
+  id         Int      @id @default(autoincrement())
+  profileId  Int
+  profile    Profile  @relation(fields: [profileId], references: [id])
+  createdAdt DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Projects {
+  id        Int      @id @default(autoincrement())
+  profileId Int
+  profile   Profile  @relation(fields: [profileId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Qualification {
+  id        Int      @id @default(autoincrement())
+  profilId  Int
+  profile   Profile  @relation(fields: [profilId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 enum ProfileType {
