@@ -1,65 +1,56 @@
 <%- include("partials/_heading.ejs") %>
 
-<div class="container">
-  <div class="forms-container">
-    <div class="signin-signup">
-      <form action="#" class="sign-in-form">
-        <h2 class="title">User Sign in</h2>
-        <div class="input-field">
-          <i class="fas fa-user"></i>
-          <input type="text" placeholder="Username" />
-        </div>
-        <div class="input-field">
-          <i class="fas fa-lock"></i>
-          <input type="password" placeholder="Password" />
-        </div>
-        <input type="submit" value="Login" class="btn solid" />
-      </form>
-      <form action="#" class="sign-up-form">
-        <h2 class="title">Admin Sign up</h2>
-        <div class="input-field">
-          <i class="fas fa-user"></i>
-          <input type="text" placeholder="Username" />
-        </div>
-        <div class="input-field">
-          <i class="fas fa-envelope"></i>
-          <input type="email" placeholder="Email" />
-        </div>
-        <div class="input-field">
-          <i class="fas fa-lock"></i>
-          <input type="password" placeholder="Password" />
-        </div>
-        <input type="submit" class="btn" value="Sign up" />
-      </form>
-    </div>
-  </div>
-
-  <div class="panels-container">
-    <div class="panel left-panel">
-      <div class="content">
-        <h3>Login as a admin ?</h3>
-        <p>
-          Log in as an admin to post jobs, manage applications, and hire the
-          best talent. Grow your team and business with a streamlined
-          recruitment process.
-        </p>
-
-        <button class="btn transparent" id="sign-up-btn">Sign up</button>
+<div class="max-w-md mx-auto pt-12 w-full">
+  <form
+    action="/login"
+    method="post"
+    class="border border-slate-300 rounded-md w-full flex flex-col gap-6 px-8 pt-12 pb-8"
+  >
+    <h2 class="text-2xl font-black text-center tracking-tight">User Sign in</h2>
+    <div class="flex flex-col gap-2">
+      <div
+        class="w-full flex items-center gap-3 border border-slate-200 px-4 py-3 rounded-md"
+      >
+        <i class="fas fa-user"></i>
+        <input
+          type="text"
+          placeholder="Username"
+          class="w-full focus-within:outline-none"
+        />
       </div>
-      <img src="img/log.svg" class="image" alt="" />
-    </div>
-    <div class="panel right-panel">
-      <div class="content">
-        <h3>Login as a user ?</h3>
-        <p>
-          Log in to find job opportunities tailored to your skills and
-          interests. Easily search, apply, and track your applications, bringing
-          you closer to landing your dream job.
-        </p>
-        <button class="btn transparent" id="sign-in-btn">Sign in</button>
+      <div
+        class="w-full flex items-center gap-3 border border-slate-200 px-4 py-3 rounded-md"
+      >
+        <i class="fas fa-lock"></i>
+        <input
+          type="password"
+          placeholder="Password"
+          class="w-full focus-within:outline-none"
+        />
       </div>
+      <a href="/forgot-password" class="text-sm text-right">Forgot Password?</a>
     </div>
-  </div>
+    <button
+      type="submit"
+      class="bg-orange-500 py-3 text-white font-bold rounded-md hover:bg-orange-600 transition ease-in-out duration-100"
+    >
+      Login
+    </button>
+    <!-- <div class="flex flex-col gap-4">
+      <div class="flex gap-2 w-full items-center">
+        <hr class="border border-slate-200 w-full" />
+        <p class="text-slate-300 flex gap-2">Or</p>
+        <hr class="border border-slate-200 w-full" />
+      </div>
+      <div>
+        <button
+          class="border text-orange-500 rounded-md border-orange-500 py-3 w-full"
+        >
+          Create Account
+        </button>
+      </div>
+    </div> -->
+  </form>
 </div>
 
 <%- include('partials/_footer.ejs') %>

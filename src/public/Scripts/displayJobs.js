@@ -63,11 +63,10 @@ document.addEventListener("DOMContentLoaded", function () {
               <h4>Requirements:</h4>
               ${jobPostData.jobRequirements}
             </div>
-            ${
-              jobPostData.uploadedImage
-                ? `<img src="${jobPostData.uploadedImage}" alt="Job Image" class="job-image">`
-                : ""
-            }
+            ${jobPostData.uploadedImage
+            ? `<img src="${jobPostData.uploadedImage}" alt="Job Image" class="job-image">`
+            : ""
+          }
           </div>
         `;
 
@@ -93,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     } else {
       // If no job data is found, display a message
-      jobList.innerHTML = "<p>No job listings available at the moment.</p>";
+      // jobList.innerHTML = "<p>No job listings available at the moment.</p>";
     }
   }
 

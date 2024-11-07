@@ -11,7 +11,7 @@
   
         <div>
           <ul class="flex flex-col gap-1">
-            <li class="flex gap-2 items-center text-slate-500 max-xs:text-sm">
+            <li class="flex gap-2 items-center text-slate-500 text-sm">
               <i class="fa-solid fa-phone"></i>
               <p>
                 01-5244306,
@@ -20,23 +20,27 @@
                 9841343705
               </p>
             </li>
-            <li class="flex gap-2 items-center text-slate-500 max-xs:text-sm">
-              <i class="fa-solid fa-envelope"></i>
-              <p>
-                info@presidential.edu.np
-              </p>
-            </li>
-            <li class="flex gap-2 items-center text-slate-500 max-xs:text-sm">
-              <i class="fa-solid fa-location-dot"></i>
-              <p>Thapagaun, New Baneshwor, Kathmandu
+            <li>
+              <a href="mailto:info@presidential.edu.np"  class="flex gap-2 items-center text-slate-500 text-sm">
+                <i class="fa-solid fa-envelope"></i>
+                <p>
+                  info@presidential.edu.np
                 </p>
+              </a>
+            </li>
+            <li>
+              <a href="https://maps.app.goo.gl/mLj1zYc6wuiaEH5w7" class="flex gap-2 items-center text-slate-500 text-sm" target="_blank">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Thapagaun, New Baneshwor, Kathmandu
+                  </p>
+              </a>
             </li>
             </li>
           </ul>
         </div>
       </div>
       <div class="flex justify-between border-t border-slate-200 py-4 max-xs:flex-col max-xs:gap-4">
-        <p class="text-slate-500 max-xs:text-sm">&copy; <%- new Date().getFullYear() %> Presidential Graduate School All right reserved  </p>
+        <p class="text-slate-500 text-sm">&copy; <%- new Date().getFullYear() %> <a href="https://presidential.edu.np/">Presidential Graduate School</a> All right reserved  </p>
         <ul class="flex gap-4">
           <li>
             <a href="#" class="text-slate-400 hover:text-slate-600"><i class="fa-brands fa-facebook"></i></a>
@@ -58,7 +62,7 @@
     </div>
   </footer>
 </div>
-  <script src="/scripts/displayJobs.js"></script>
+  <!-- <script src="/scripts/displayJobs.js"></script> -->
   <script src="/scripts/removeJobs.js"></script>
   <script src="/scripts/login.js"></script>
 

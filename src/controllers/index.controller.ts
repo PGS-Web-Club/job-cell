@@ -12,7 +12,3 @@ export const contactPage = (req: Request, res: Response) => {
     return res.render('client/contact', { title: 'Contact Us' });
 };
 
-export const loginPage = (req: Request, res: Response) => {
-    return res.render('login', { title: 'Login' });
-};
-
